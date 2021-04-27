@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# CodeStream ignored files
+/../../Discord-RichPresence\.idea/codestream.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\namor\IdeaProjects\Discord-RichPresence\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

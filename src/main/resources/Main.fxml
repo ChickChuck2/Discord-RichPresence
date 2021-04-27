@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <VBox prefHeight="516.0" prefWidth="285.0" stylesheets="@Styles/LeftBox.css">
+        <AnchorPane prefHeight="169.0" prefWidth="285.0">
+            <ImageView fitHeight="120.0" fitWidth="285.0" layoutX="83.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@images/AppIcon.png" />
+            </ImageView>
+        </AnchorPane>
+        <AnchorPane prefHeight="121.0" prefWidth="285.0" />
+        <Button fx:id="ButtonTabDefault" mnemonicParsing="false" onAction="#changeToDefault" prefHeight="91.0" prefWidth="298.0" stylesheets="@Styles/navButtons.css" text="Padrão" />
+        <Button fx:id="ButtonTabSequence" mnemonicParsing="false" onAction="#ChangeSequencia" prefHeight="91.0" prefWidth="298.0" stylesheets="@Styles/navButtons.css" text="Sequencia" />
+        <AnchorPane prefHeight="27.0" prefWidth="285.0">
+            <Button layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#SaveConfig" stylesheets="@Styles/Buttons.css" text="Save Config" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="4.0" />
+            <Button layoutX="219.0" layoutY="7.0" mnemonicParsing="false" onAction="#ConfigLoad" stylesheets="@Styles/Buttons.css" text="Load Config" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+            <Button fx:id="startRPC" layoutX="94.0" layoutY="7.0" mnemonicParsing="false" onAction="#initRPC" stylesheets="@Styles/Buttons.css" text="Start Presence" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="4.0" />
+        </AnchorPane>
+    </VBox>
+    <VBox layoutX="285.0" prefHeight="516.0" prefWidth="567.0" stylesheets="@Styles/LeftBox.css">
+        <TabPane fx:id="tabela" prefHeight="519.0" prefWidth="567.0" stylesheets="@Styles/TabPanes.css" tabClosingPolicy="UNAVAILABLE">
+            <Tab fx:id="defaultTab" text="padrão">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="299.0">
+                    <VBox layoutX="12.0" layoutY="24.0" prefHeight="275.0" prefWidth="264.0" stylesheets="@Styles/LeftBox.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Label id="lala" stylesheets="@Styles/Labels.css" text="ID *" />
+                        <ComboBox fx:id="IDApplication" editable="true" prefWidth="150.0" promptText="Application ID" stylesheets="@Styles/ComboBoxs.css" />
+                        <AnchorPane prefHeight="11.0" prefWidth="302.0" />
+                        <Label stylesheets="@Styles/Labels.css" text="Detalhes" />
+                        <AnchorPane prefHeight="11.0" prefWidth="302.0" />
+                        <TextField fx:id="RPCDescription" stylesheets="@Styles/TextFields.css" />
+                        <AnchorPane prefHeight="11.0" prefWidth="302.0" />
+                        <Label stylesheets="@Styles/Labels.css" text="Estado" />
+                        <TextField fx:id="RPCState" stylesheets="@Styles/TextFields.css" />
+                        <AnchorPane prefHeight="23.0" prefWidth="302.0" />
+                        <Label stylesheets="@Styles/Labels.css" text="Imagem grande " />
+                        <ComboBox fx:id="RPCBigIcon" editable="true" prefWidth="150.0" promptText="Big Icon NAME" stylesheets="@Styles/ComboBoxs.css" />
+                        <AnchorPane prefHeight="5.0" prefWidth="567.0">
+                            <TextField fx:id="RPCBigIcontext" layoutY="1.0" promptText="Texto da imagem grande" stylesheets="@Styles/TextFields.css" />
+                        </AnchorPane>
+                        <Label stylesheets="@Styles/Labels.css" text="Imagem pequena" />
+                        <ComboBox fx:id="RPCSmallIcon" editable="true" prefWidth="150.0" promptText="Small icon NAME" stylesheets="@Styles/ComboBoxs.css" />
+                        <AnchorPane prefHeight="24.0" prefWidth="567.0">
+                            <TextField fx:id="RPCSmallIconText" layoutY="1.0" promptText="Texto da imagem pequena" stylesheets="@Styles/TextFields.css" />
+                        </AnchorPane>
+                        <AnchorPane prefHeight="53.0" prefWidth="302.0">
+                            <RadioButton fx:id="startTimeStampRadio" layoutY="6.0" mnemonicParsing="false" selected="true" stylesheets="@Styles/RadioButtons.css" text="Tempo de inicio" />
+                            <RadioButton fx:id="endTimeStampRadio" layoutY="31.0" mnemonicParsing="false" stylesheets="@Styles/RadioButtons.css" text="Tempo de termino" />
+                        </AnchorPane>
+                        <AnchorPane prefHeight="18.0" prefWidth="302.0" />
+                        <Label stylesheets="@Styles/Labels.css" text="Party" />
+                        <AnchorPane prefHeight="43.0" prefWidth="567.0">
+                            <Label layoutX="133.0" layoutY="10.0" stylesheets="@Styles/Labels.css" text="Atual" />
+                            <Label layoutX="410.0" layoutY="10.0" stylesheets="@Styles/Labels.css" text="Max" />
+                            <TextField fx:id="MaxPartySize" layoutX="304.0" layoutY="6.0" prefHeight="25.0" prefWidth="106.0" stylesheets="@Styles/TextFields.css" />
+                            <TextField fx:id="CurrentPartySize" layoutX="161.0" layoutY="6.0" prefHeight="25.0" prefWidth="105.0" stylesheets="@Styles/TextFields.css" />
+                        </AnchorPane>
+                        <Label fx:id="readylabel" stylesheets="@Styles/Labels.css" text="Esperando.." />
+                    </VBox>
+                </AnchorPane>
+            </Tab>
+            <Tab fx:id="sequenciaTab" text="Sequencia">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="324.0" />
+            </Tab>
+        </TabPane>
+    </VBox>
+</AnchorPane>

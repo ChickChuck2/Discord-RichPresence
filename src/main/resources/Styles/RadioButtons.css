@@ -1,0 +1,8 @@
+RadioButton {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-weight: bold;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: green;
+    -fx-background-insets: 0;
+}

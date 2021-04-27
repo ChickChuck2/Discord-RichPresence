@@ -1,0 +1,7 @@
+Button {
+    -fx-background-color: rgb(103, 123, 196);
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}

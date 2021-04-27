@@ -1,0 +1,23 @@
+
+.combo-box-base{
+    -fx-background-color: #0FF;
+    -fx-padding: 2 2;
+    -fx-font-weight: bold;
+}
+
+.combo-box-base:editable{
+    -fx-background-color: rgba(0, 0, 0, 0.67);
+    -fx-background-radius: 5px;
+}
+
+.combo-box-base:editable > .text-field {
+    -fx-border-image-source: null;
+    -fx-background-color: transparent;
+    -fx-padding: 1 0;
+
+    -fx-text-fill: white;
+}
+.combo-box-base > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 4;
+}

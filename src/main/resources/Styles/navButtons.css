@@ -1,0 +1,10 @@
+Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: rgb(49, 51, 56);
+    -fx-border-radius: 6px;
+
+}
+.button:hover {
+    -fx-background-color: rgb(49, 51, 56);
+}

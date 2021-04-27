@@ -1,0 +1,11 @@
+TextField {
+    -fx-background-color: rgba(53, 56, 62, 0.8);
+    -fx-border-color: rgba(255,255,255,0.80);
+    -fx-text-fill: #ffffff;
+
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.text-field:hover {
+    -fx-background-color: rgba(103, 123, 196,0.5);
+}
