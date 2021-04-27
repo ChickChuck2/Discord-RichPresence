@@ -15,8 +15,8 @@ import java.util.Objects;
 
 public class Main extends Application {
 
-    private static final String iconImageLoc =
-            "images/AppIconTray.png";
+    private static final String ImageTrayURL =
+            "https://github.com/ChickChuck2/Discord-RichPresence/blob/master/src/main/resources/images/AppIconTray.png?raw=true";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -76,10 +76,10 @@ public class Main extends Application {
             exitApp.addActionListener(exitListener);
             popup.add(exitApp);
 
-            URL imageLoc = new URL(
-                    iconImageLoc);
+            URL Image = new URL(
+                    ImageTrayURL);
 
-            trayIcon = new TrayIcon(ImageIO.read(imageLoc),"Disorder-RichPresence", popup);
+            trayIcon = new TrayIcon(ImageIO.read(Image),"Disorder-RichPresence", popup);
 
             trayIcon.setImageAutoSize(true);
 
