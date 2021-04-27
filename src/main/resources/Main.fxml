@@ -60,7 +60,7 @@
                         <AnchorPane prefHeight="18.0" prefWidth="302.0" />
                         <Label stylesheets="@Styles/Labels.css" text="Party" />
                         <AnchorPane prefHeight="43.0" prefWidth="567.0">
-                            <Label layoutX="133.0" layoutY="10.0" stylesheets="@Styles/Labels.css" text="Atual" />
+                            <Label layoutX="130.0" layoutY="10.0" stylesheets="@Styles/Labels.css" text="Atual" />
                             <Label layoutX="410.0" layoutY="10.0" stylesheets="@Styles/Labels.css" text="Max" />
                             <TextField fx:id="MaxPartySize" layoutX="304.0" layoutY="6.0" prefHeight="25.0" prefWidth="106.0" stylesheets="@Styles/TextFields.css" />
                             <TextField fx:id="CurrentPartySize" layoutX="161.0" layoutY="6.0" prefHeight="25.0" prefWidth="105.0" stylesheets="@Styles/TextFields.css" />
