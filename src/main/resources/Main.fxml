@@ -12,20 +12,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
     <VBox prefHeight="516.0" prefWidth="285.0" stylesheets="@Styles/LeftBox.css">
-        <AnchorPane prefHeight="169.0" prefWidth="285.0">
+        <AnchorPane prefHeight="43.0" prefWidth="285.0">
             <ImageView fitHeight="120.0" fitWidth="285.0" layoutX="83.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@images/AppIcon.png" />
             </ImageView>
         </AnchorPane>
-        <AnchorPane prefHeight="121.0" prefWidth="285.0" />
-        <Button fx:id="ButtonTabDefault" mnemonicParsing="false" onAction="#changeToDefault" prefHeight="91.0" prefWidth="298.0" stylesheets="@Styles/navButtons.css" text="Padrão" />
-        <Button fx:id="ButtonTabSequence" mnemonicParsing="false" onAction="#ChangeSequencia" prefHeight="91.0" prefWidth="298.0" stylesheets="@Styles/navButtons.css" text="Sequencia" />
-        <AnchorPane prefHeight="27.0" prefWidth="285.0">
-            <Button layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#SaveConfig" stylesheets="@Styles/Buttons.css" text="Save Config" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="4.0" />
-            <Button layoutX="219.0" layoutY="7.0" mnemonicParsing="false" onAction="#ConfigLoad" stylesheets="@Styles/Buttons.css" text="Load Config" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
-            <Button fx:id="startRPC" layoutX="94.0" layoutY="7.0" mnemonicParsing="false" onAction="#initRPC" stylesheets="@Styles/Buttons.css" text="Start Presence" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="4.0" />
+        <VBox prefHeight="200.0" prefWidth="100.0" />
+        <Button fx:id="ButtonTabDefault" mnemonicParsing="false" onAction="#changeToDefault" prefHeight="57.0" prefWidth="285.0" stylesheets="@Styles/navButtons.css" text="Padrão" />
+        <Button fx:id="ButtonTabSequence" mnemonicParsing="false" onAction="#ChangeSequencia" prefHeight="55.0" prefWidth="285.0" stylesheets="@Styles/navButtons.css" text="Sequencia" />
+        <AnchorPane prefHeight="47.0" prefWidth="285.0">
+            <Button layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#SaveConfig" prefHeight="25.0" prefWidth="85.0" stylesheets="@Styles/Buttons.css" text="Save Config" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="4.0" />
+            <Button layoutX="219.0" layoutY="7.0" mnemonicParsing="false" onAction="#ConfigLoad" prefHeight="25.0" prefWidth="85.0" stylesheets="@Styles/Buttons.css" text="Load Config" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+            <Button fx:id="startRPC" layoutX="94.0" layoutY="7.0" mnemonicParsing="false" onAction="#initRPC" prefHeight="25.0" prefWidth="97.0" stylesheets="@Styles/Buttons.css" text="Start Presence.Presence" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="4.0" />
+         <Button layoutX="97.0" layoutY="33.0" mnemonicParsing="false" onAction="#shutdownRPC" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: transparent; -fx-border-color: red; -fx-text-fill: red; -fx-font-weight: BOLD; -fx-border-radius: 5px;" text="Parar" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="35.0" />
         </AnchorPane>
     </VBox>
     <VBox layoutX="285.0" prefHeight="516.0" prefWidth="567.0" stylesheets="@Styles/LeftBox.css">
@@ -46,12 +47,12 @@
                         <Label stylesheets="@Styles/Labels.css" text="Imagem grande " />
                         <ComboBox fx:id="RPCBigIcon" editable="true" prefWidth="150.0" promptText="Big Icon NAME" stylesheets="@Styles/ComboBoxs.css" />
                         <AnchorPane prefHeight="5.0" prefWidth="567.0">
-                            <TextField fx:id="RPCBigIcontext" layoutY="1.0" promptText="Texto da imagem grande" stylesheets="@Styles/TextFields.css" />
+                            <TextField fx:id="RPCBigIcontext" layoutY="1.0" promptText="Texto da imagem grande" stylesheets="@Styles/TextFields.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="0.0" />
                         </AnchorPane>
                         <Label stylesheets="@Styles/Labels.css" text="Imagem pequena" />
                         <ComboBox fx:id="RPCSmallIcon" editable="true" prefWidth="150.0" promptText="Small icon NAME" stylesheets="@Styles/ComboBoxs.css" />
                         <AnchorPane prefHeight="24.0" prefWidth="567.0">
-                            <TextField fx:id="RPCSmallIconText" layoutY="1.0" promptText="Texto da imagem pequena" stylesheets="@Styles/TextFields.css" />
+                            <TextField fx:id="RPCSmallIconText" layoutY="1.0" promptText="Texto da imagem pequena" stylesheets="@Styles/TextFields.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="356.0" AnchorPane.topAnchor="0.0" />
                         </AnchorPane>
                         <AnchorPane prefHeight="53.0" prefWidth="302.0">
                             <RadioButton fx:id="startTimeStampRadio" layoutY="6.0" mnemonicParsing="false" selected="true" stylesheets="@Styles/RadioButtons.css" text="Tempo de inicio" />
