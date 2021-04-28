@@ -21,12 +21,9 @@ public class Presence {
         DiscordRichPresence presence = new DiscordRichPresence();
         DiscordEventHandlers handlers = new DiscordEventHandlers();
 
-        String applicationId = IDApplication;
-        String steamId = IDApplication;
-
         handlers.ready = (user) -> System.out.println("Ready!");
         readylabel.setText("Pronto!!");
-        lib.Discord_Initialize(applicationId, handlers, true, steamId);
+        lib.Discord_Initialize(IDApplication, handlers, true, IDApplication);
 
         presence.details = RPCDescription;
         presence.state = RPCState;
@@ -37,11 +34,11 @@ public class Presence {
         presence.smallImageKey = RPCSmallIcon;
         presence.smallImageText = RPCSmallIconText;
 
-        if (startTimeStampRadio == true) {
+        if (startTimeStampRadio) {
             //Passado
             presence.startTimestamp = System.currentTimeMillis() / 1000;
         }
-        if (endTimeStampRadio == true) {
+        if (endTimeStampRadio) {
             //restante
             TextInputDialog dialog = new TextInputDialog("1000");
             dialog.setTitle("Tempo de termino");

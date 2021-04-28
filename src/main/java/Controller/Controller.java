@@ -2,18 +2,16 @@ package Controller;
 
 import Config.SaveConfig;
 import Presence.Presence;
-import club.minnced.discord.rpc.DiscordEventHandlers;
-import club.minnced.discord.rpc.DiscordRPC;
-import club.minnced.discord.rpc.DiscordRichPresence;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import javafx.scene.control.*;
-import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import jdk.nashorn.internal.runtime.ParserException;
-import java.io.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Map;
-import java.util.Optional;
 
 public class Controller {
 
